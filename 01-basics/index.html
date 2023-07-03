@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="">username : </label>
+      <input type="text" name="username" id="username" />
+      <button id="btnSubmit">Submit</button>
+      <button id="btnChange">Change Text</button>
+    </form>
+
+    <script>
+      const btnSubmit = document.querySelector("#btnSubmit");
+      const btnChange = document.getElementById("btnChange");
+      const txtUsername = document.getElementById("username");
+
+      btnChange.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        txtUsername.value = "Chnaged!!";
+      });
+
+      btnSubmit.addEventListener("click", (event) => {
+        event.preventDefault();
+        alert(`Hello from ${txtUsername.value}!!`);
+      });
+    </script>
+  </body>
+</html>
